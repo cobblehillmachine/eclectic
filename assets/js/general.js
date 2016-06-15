@@ -3,10 +3,13 @@ $( window ).load(function() {
 	squareMaker($('#map-canvas'));
 	masonryLightbox();
 	homePageSlider();
-	if ($('.instagram').length > 0) {
-		instagramFeed()
+	if ($('.sidebar .instagram').length > 0) {
+		instagramFeed();
 	}
-		mobileBlogNav();
+	if ($('.home.page #instafeed').length > 0) {
+		homepageInstagramFeed();
+	}
+	mobileBlogNav();
 	mobileCommentSection();
 	blogImages();
 	masonry();
@@ -108,11 +111,11 @@ function homePageSlider() {
 			'directionNav':false,
 			'smoothHeight':true,
 			'start': function() {
-				if ($(window).width() > 930) {
-					var height = $('.flexslider').height();
-					$('.inner-border').css('height', height);
-					$('.flex-control-nav').insertBefore($('.header-image.full-width'));
-				}
+				// if ($(window).width() > 930) {
+				// 	var height = $('.flexslider').height();
+				// 	$('.inner-border').css('height', height);
+				// 	$('.flex-control-nav').insertBefore($('.header-image.full-width'));
+				// }
 			}
 		})
     } else {
@@ -274,6 +277,20 @@ function instagramFeed() {
         sortBy: 'most-recent',
         limit: 8,
         resolution: 'thumbnail'
+
+    });
+    feed.run();
+}
+
+function homepageInstagramFeed() {
+	 var feed = new Instafeed({
+        accessToken: '6883815.4b07bb4.baaad29afc03420ea966f3b04e282984',
+        clientId: '4b07bb475d01479b94a6ee3c1e84b768',
+        get: 'user',
+        userId: 6883815,
+        sortBy: 'most-recent',
+        limit: 6,
+        resolution: 'low_resolution'
 
     });
     feed.run();

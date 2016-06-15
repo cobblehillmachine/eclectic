@@ -27,6 +27,13 @@
 	<?php endif; ?>
 </div>
 
+<div class="instagram center">
+	<h3>follow us on instagram <a href="https://www.instagram.com/eclecticcharleston/" target=_blank>@eclecticcharleston</a></h3>
+	<div id="instafeed">
+	
+	</div>
+</div>
+
 <div class="splash-signup">
 	<span class="close">X</span>
 	<h2>Help Us Help You!</h2>

@@ -2762,6 +2762,8 @@ h3.shipping-banner {
 .search-form { float: right; position: relative; width: 100%; max-width: 350px;margin: 0 auto;}
 @media only screen and (max-width: 650px) {
 	.search-form {	float: none; margin: 0 auto 40px;}
+  .home.page #instafeed a { width: 33%;}
+  .home.page #instafeed a:nth-child(-n+3) { display: none;}
 }
 .search-form input[type="search"] {	border-radius: 0; appearance: none; -webkit-appearance: none; -moz-appearance: none; border: 2px solid #d9d8d7; padding: 10px; font: normal 700 14px "futura-pt";font-size: 14px;text-transform: uppercase;letter-spacing: 3px; width: 100%;color: #88857f;}
 .search-form input[type="search"]::-webkit-input-placeholder {color: #88857f;}
@@ -2769,3 +2771,9 @@ h3.shipping-banner {
 .search-form input[type="search"]::-moz-placeholder {color: #88857f;}
 .search-form input[type="search"]:-ms-input-placeholder {color: #88857f;}
 .search-form button {	background-color: transparent; padding: 6px 10px; font-size: 20px; color: #88857f; position: absolute; right: 0; top: 0;}
+
+.center { text-align: center;}
+.instagram h3 { padding: 5px 10px;}
+.home.page #instafeed { display: table;}
+.home.page #instafeed a { display: table-cell; width: 15%;}
+.home.page #instafeed img { display: block;}
