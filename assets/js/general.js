@@ -267,7 +267,7 @@ function mobileCommentSection() {
 
 function instagramFeed() {
 	 var feed = new Instafeed({
-        accessToken: '6883815.467ede5.98605fad35704967bfc12d544d60400d',
+        accessToken: '6883815.4b07bb4.baaad29afc03420ea966f3b04e282984',
         clientId: '4b07bb475d01479b94a6ee3c1e84b768',
         get: 'user',
         userId: 6883815,
