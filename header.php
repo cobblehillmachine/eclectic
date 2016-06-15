@@ -16,8 +16,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <!-- <link rel="shortcut icon" href="<?php echo get_site_url(); ?>/favicon.ico"> -->
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php get_site_url() ?>/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php get_site_url() ?>/favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
 <script src="//use.typekit.net/dgk2xqk.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
