@@ -795,51 +795,19 @@ footer .footer-bottom a {
     display: none;
   }
 }
-.offset-cont.contact .main-cont {
-  padding-bottom: 20px;
-}
-@media only screen and (max-width: 1150px) {
-  .offset-cont.contact .main-cont {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 50px 50px 20px;
-  }
-}
-@media only screen and (max-width: 930px) {
-  .offset-cont.contact .main-cont {
-    padding: 30px 0;
-  }
-}
-.offset-cont.contact .side-cont {
-  background-color: #d9d8d7;
-  border: 0;
-  width: 34%;
-  max-width: none;
-  margin-bottom: 0;
-  padding: 15px;
-}
-.offset-cont.contact .side-cont h3 {
+
+.contact  h3 {
   margin-bottom: 5px;
 }
-.offset-cont.contact .side-cont ul {
+.contact ul {
   margin-top: 0;
   margin-bottom: 40px;
 }
-.offset-cont.contact .side-cont em {
+.contact em {
   font-style: italic;
   font-size: 14px;
 }
-@media only screen and (max-width: 1150px) {
-  .offset-cont.contact .side-cont {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 20px;
-  }
-}
+
 .offset-cont .side-cont {
   max-width: 400px;
   width: 33%;
@@ -1684,7 +1652,7 @@ footer .footer-bottom a {
   background: none !important;
 }
 .form-cta {
-  margin: 0 50px -50px;
+  margin: 20px 0 0;
   border: 2px #d9d8d7 solid;
   padding: 20px;
   text-align: center;
@@ -1692,11 +1660,7 @@ footer .footer-bottom a {
 .form-cta a {
   text-decoration: underline;
 }
-@media only screen and (max-width: 930px) {
-  .form-cta {
-    margin: 0 auto 20px;
-  }
-}
+
 .blog .title {
   text-transform: uppercase;
   font: normal 400 14px "flood-std";
@@ -2773,7 +2737,36 @@ h3.shipping-banner {
 .search-form button {	background-color: transparent; padding: 6px 10px; font-size: 20px; color: #88857f; position: absolute; right: 0; top: 0;}
 
 .center { text-align: center;}
+
+// NEW HOMEPAGE - 6/15/16 MH
 .instagram h3 { padding: 5px 10px;}
 .home.page #instafeed { display: table;}
 .home.page #instafeed a { display: table-cell; width: 15%;}
 .home.page #instafeed img { display: block;}
+
+.contact {  border-top: 2px solid #D9D8D6; padding-top: 30px; width: 90%; margin: 0 auto; margin-bottom: 50px;}
+.contact .gray {  background-color: #D9D8D6; text-align: center; padding: 40px; top: 0; bottom: 20%; }
+.contact .form-cta {  top: 80%; bottom: 0;}
+.contact .gray, .contact .form-cta {  position: absolute; width: 100%;}
+.contact .gray .content, .contact .form-cta .content {  position: absolute; top: 50%; left: 50%; width: 75%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); }
+.contact .table-cell {  width: 50%; vertical-align: top; position: relative;}
+.contact .table-cell:first-child {  padding-right: 15px;}
+.contact .table-cell:last-child {  padding-left: 15px;}
+.contact .table-cell img { display: block;}
+
+@media only screen and (max-width: 830px) {
+  .contact .table, .contact .table-cell { display: block; width: 100%;}
+  .contact .gray, .contact .form-cta {  position: relative;top: auto; bottom: auto;}
+  .contact .gray .content, .contact .form-cta .content {  position: relative; top: auto; left: auto; width: 100%; transform: none; -webkit-transform: none; -moz-transform: none;}
+  .contact .table-cell:first-child {  padding-right: 0;}
+  .contact .table-cell:last-child  {  padding-left: 0;}
+  .contact .gray {  margin-top: 20px;}
+}
+
+
+
+
+
+
+
+
