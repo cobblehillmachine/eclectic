@@ -15,7 +15,7 @@ get_header(); the_post(); ?>
 	<div class="skinny-cont">
 		<?php the_content() ?>
 	</div>
-	
+	<hr>
     <div class="table">
     	<div class="table-cell"><?php the_field('column_1') ?></div>
     	<div class="table-cell"><?php the_field('column_2') ?></div>
