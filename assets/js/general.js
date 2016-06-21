@@ -17,9 +17,12 @@ $( window ).load(function() {
 	blogImages();
 	masonry();
 	productGallery();
+	if ($(window).width() > 530) {
+		divEqualizer($('.products li'));
+	}
 	if ($(window).width() > 930) {
 		divEqualizer($('.services .service'));
-		divEqualizer($('.products li'));
+		
 		desktopProductThumbnailSlider();
 		blogWidth();
 		splashCookie();
