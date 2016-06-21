@@ -603,7 +603,7 @@ footer .footer-bottom a {
 .splash-signup {
   display: none;
   width: 615px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
