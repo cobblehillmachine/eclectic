@@ -2815,3 +2815,5 @@ h3.shipping-banner {
   .contact .gray {  margin-top: 20px;}
   .design-styling .table-cell, .design-styling .table { width: 100%; display: block; padding: 0;}
 }
+
+.skinny-cont {  max-width: 600px; margin: 0 auto;}

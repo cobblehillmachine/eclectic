@@ -7,11 +7,15 @@
  * @subpackage themename
  */
 
-get_header(); ?>
+get_header(); the_post(); ?>
 <div class="full-width">
 	<?php the_post_thumbnail('full'); ?>
 </div>
 <div class="design-styling">
+	<div class="skinny-cont">
+		<?php the_content() ?>
+	</div>
+	
     <div class="table">
     	<div class="table-cell"><?php the_field('column_1') ?></div>
     	<div class="table-cell"><?php the_field('column_2') ?></div>
