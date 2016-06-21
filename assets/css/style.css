@@ -876,6 +876,10 @@ footer .footer-bottom a {
 }
 .designer.sidney .headshot {
   max-width: 45%;
+  text-align: center;
+}
+.designer.sidney .headshot p {
+  text-align: left;
 }
 @media only screen and (max-width: 1150px) {
   .designer.sidney .headshot {
