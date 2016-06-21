@@ -3,6 +3,9 @@ $( window ).load(function() {
 	squareMaker($('#map-canvas'));
 	masonryLightbox();
 	homePageSlider();
+	shopPageSlider();
+	shopThePostSlider();
+	squareMaker($('.circle-wrapper'))
 	if ($('.sidebar .instagram').length > 0) {
 		instagramFeed();
 	}
@@ -190,6 +193,34 @@ function mobileProductThumbnailSlider() {
       $('#carousel .flex-viewport').css('overflow', 'visible');
 	  $('#carousel .slides').css('width', $('#carousel .slides li').length * 80);
       $('#carousel .slides').css("margin", "0 auto");
+}
+
+function shopPageSlider() {
+	$('.shop-page.header').flexslider({
+		'slideshow' : true,
+		'directionNav': false
+	})
+}
+
+function shopThePostSlider() {
+	if ($(window).width() > 700) {
+		number = 3;
+	} else {
+		number = 2;
+	}
+	$('.shop-the-post .flexslider').flexslider({
+		controlNav: false,
+        animationLoop: true,
+        animation: 'slide',
+        slideshow: false,
+        prevText: '',
+        nextText: '',
+        itemWidth: 210,
+	    itemMargin: 5,
+	    minItems: number,
+	    maxItems: number,
+        directionNav: true
+	})
 }
 
 

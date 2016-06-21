@@ -25,21 +25,43 @@
 
 
 <?php if (is_shop()) { ?>
-<div class="shop-page header desktop">
-	<?php echo get_the_post_thumbnail( 7, 'full'); ?>
-</div>
+	<?php if( have_rows('slider', 7) ): ?>
+		<div class="shop-page header desktop flexslider">
+			<ul class="slides">
+			<?php while( have_rows('slider', 7) ): the_row(); 
+				$image = get_sub_field('image');
+				$caption = get_sub_field('caption');
+				$headline = get_sub_field('caption_headline');
+				$copy = get_sub_field('caption_copy');
+				$button_text= get_sub_field('caption_button_text');
+				$link = get_sub_field('caption_button_link'); ?>
+				<li class="slide <?php if ($caption) { ?>caption-slide<?php } ?>">
+					<?php if ($caption) { ?>
+						<div class="table-cell caption">
+							<h2><?php echo $headline ?></h2>
+							<p><?php echo $copy ?></p>
+							<p><a href="<?php echo $link ?>" class="button"><?php echo $button_text ?></a></p>
+						</div>
+					<?php } ?>
+					<div class="table-cell"><img src="<?php echo $image; ?>"/></div>
+				</li>
+			<?php endwhile; ?>
+			</ul>
+		</div>
+	<?php endif; ?>
 <?php } ?>
 
 <div class="shop-wrapper">
 	<?php if (is_shop()) { ?>
-		<div class="page-title">
+		
+		<div class="page-title gray">
 		
 			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<input type="search" class="search-field" placeholder="Search Shop" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'twentysixteen' ); ?>" />
 				<input type="hidden" name="search-type" value="product" />
 				<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
 			</form>
-			<h3>Enjoy $10 Flat Rate Shipping For A Limited Time<hr></h3>
+			<h3>Enjoy $10 Flat Rate Shipping For A Limited Time</h3>
 		</div>
 	<?php } else if (is_single()) { ?>
 		<h3 class="shipping-banner float">Enjoy $10 Flat Rate Shipping For A Limited Time</h3>

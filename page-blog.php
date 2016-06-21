@@ -1,25 +1,16 @@
 <?php get_header(); ?>
-<div class="full-width desktop">
-	<?php the_post_thumbnail('full'); ?>
-</div>
+
 <div class="toolbar blog filter mobile">
 	<li class="mobile-nav-header">Categories</li>
 	<ul>
 		<?php wp_list_categories( array('hide_empty' => 0, 'child_of' => 65, 'title_li' => '') ); ?>
 	</ul>
 </div>
-<div class="offset-cont blog">
-	<div class="title">Blog</div>
-	<div class="sidebar">
-		<div class="categories">
-			<?php wp_list_categories( array('hide_empty' => 0, 'child_of' => 65) ); ?>
-		</div>
-		<div class="instagram">
-			<h6>Instagram</h6>
-			<div id="instafeed"></div>
-		</div>
+<div class="blog table">
+	<div class="sidebar table-cell">
+		<?php get_sidebar('blog') ?>
 	</div>
-	<div class="main-cont pinterest">
+	<div class="main-cont pinterest table-cell">
 		<ul>
 			<?php $blog_posts = new WP_Query( array( 'order' => 'DESC', 'posts_per_page' => 3, 'category_name' => 'Blog', "paged" => get_query_var( 'paged' ) ) ); ?>
 			<?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post();?>
