@@ -558,12 +558,12 @@ footer .footer-bottom .cobble-hill {
 
 footer .footer-bottom .menu-footer-menu-container { text-align: left; padding: 0 30px;}
 
-footer .footer-bottom form { padding: 0 30px; width: 40%;}
+footer .footer-bottom form { padding: 0; width: 49%; padding-right: 15px; text-align: right;}
 footer .footer-bottom form input {	display: inline; appearance: none; -webkit-appearance: none; -moz-appearance: none; border: 0; border-radius: 0; vertical-align: middle;}
 footer .footer-bottom form input[type="email"] {	border: 2px solid #88857f; padding: 11px;font: normal 400 14px "proxima-nova"; width: 69%;}
 /* footer #mce-responses {	display: none;} */
 
-footer .footer-bottom .cobble-hill { text-align: right; padding: 0 30px;}
+.cobble-hill { text-align: right; padding: 0 30px 20px; margin-top: -10px;}
 
 footer .footer-bottom li {
   display: inline-block;
@@ -596,6 +596,8 @@ footer .footer-bottom a {
     position: inherit;
     right: 0;
   }
+  footer .footer-bottom form {  text-align: left;}
+  .cobble-hill {  text-align: left; margin-top: 0; padding-left: 15px}
   footer .footer-bottom li:first-child {
     padding-left: 15px;
   }

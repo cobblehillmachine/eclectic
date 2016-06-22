@@ -224,15 +224,32 @@ function custom_pre_get_posts_query( $q ) {
 	if ( ! is_admin() && is_shop() ) {
 
 
-		$q->set( 'meta_query', array(array(
-			'key' => '_featured',
-			'value' => 'yes',
-			'operator' => 'IN'
-		)));
+		$q->set('orderby','date');
+		$q->set('order','DESC');
+		$q->set('paged', false);
 
 	}
 	remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 }
+
+// function custom_pre_get_posts_query( $q ) {
+
+// 	if ( ! $q->is_main_query() ) return;
+// 	if ( ! $q->is_post_type_archive() ) return;
+	
+// 	if ( ! is_admin() && is_shop() ) {
+
+
+// 		$q->set( 'meta_query', array(array(
+// 			'key' => '_featured',
+// 			'value' => 'yes',
+// 			'operator' => 'IN'
+// 		)));
+
+// 	}
+// 	remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+// }
+
 
 // 12 products per page
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );

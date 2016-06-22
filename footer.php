@@ -42,14 +42,17 @@
 
 					<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 					<!--End mc_embed_signup-->
-				<div class="cobble-hill">
-					<a href="http://cobblehilldigital.com">Site by Cobble Hill</a>
-				</div>
+				
 			</div>
+
 		</footer>
 
 
 		<?php wp_footer(); ?>
-	</div> <!-- ENDS BODY WRAPPER -->
+	</div> <!-- ENDS MAIN CONTAINER -->
+</div><!-- ENDS BODY WRAPPER -->
+<div class="cobble-hill">
+	<a href="http://cobblehilldigital.com">Site by Cobble Hill</a>
+</div>
 </body>
 </html>
