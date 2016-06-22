@@ -224,9 +224,11 @@ function custom_pre_get_posts_query( $q ) {
 	if ( ! is_admin() && is_shop() ) {
 
 
-		$q->set('orderby','date');
-		$q->set('order','DESC');
-		$q->set('paged', false);
+		$q->set( 'meta_query', array(array(
+			'key' => '_featured',
+			'value' => 'yes',
+			'operator' => 'IN'
+		)));
 
 	}
 	remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
